@@ -58,19 +58,4 @@ const Testimonials = () => {
     </section>
   );
 };
-export default <div className="flex gap-8">
-<Button
-  onClick={() => handleSlide("left")}
-  variant="secondary"
-  className="p-4 px-5"
->
-  <IoIosArrowBack className="text-2xl" />
-</Button>
-<Button
-  onClick={() => handleSlide("right")}
-  variant="primary"
-  className="p-4 px-5"
->
-  <IoIosArrowForward className="text-2xl" />
-</Button>
-</div>;
+export default Testimonials;
