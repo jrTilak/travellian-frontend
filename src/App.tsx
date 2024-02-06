@@ -3,6 +3,7 @@ import Destinations from "./components/destinations/destinations";
 import Gallery from "./components/gallery/gallery";
 import HeroSection from "./components/hero-section/hero-section";
 import SpecialOffers from "./components/special-offer/special-offers";
+import Testimonials from "./components/testimonal/testimonials";
 import TripPlanners from "./components/trip-planners/trip-planners";
 
 const App = () => {
@@ -13,7 +14,8 @@ const App = () => {
       <SpecialOffers />
       <Blogs />
       <TripPlanners />
-      <Gallery/>
+      <Gallery />
+      <Testimonials />
     </main>
   );
 };
