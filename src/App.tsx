@@ -1,5 +1,7 @@
 import Blogs from "./components/blog/blog";
 import Destinations from "./components/destinations/destinations";
+import Footer from "./components/footer/footer";
+import Newsletter from "./components/footer/newsletter";
 import Gallery from "./components/gallery/gallery";
 import HeroSection from "./components/hero-section/hero-section";
 import SpecialOffers from "./components/special-offer/special-offers";
@@ -16,6 +18,8 @@ const App = () => {
       <TripPlanners />
       <Gallery />
       <Testimonials />
+      <Newsletter />
+      <Footer />
     </main>
   );
 };
