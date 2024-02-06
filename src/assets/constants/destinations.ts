@@ -30,6 +30,6 @@ const DESTINATIONS = [
     location: "Agra, India",
     img: DestnationImg5,
   },
-];
+] as const;
 
 export default DESTINATIONS;

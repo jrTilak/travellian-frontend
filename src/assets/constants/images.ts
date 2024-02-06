@@ -10,6 +10,6 @@ const HERO_IMAGES = [
   HeroImage3,
   HeroImage4,
   HeroImage5,
-];
+] as const;
 
 export { HERO_IMAGES };

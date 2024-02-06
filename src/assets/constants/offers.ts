@@ -40,5 +40,5 @@ const SPECIAL_OFFERS = [
     desc: "5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.",
     price: 700,
   },
-];
+] as const;
 export default SPECIAL_OFFERS;

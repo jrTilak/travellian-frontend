@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       {...props}
       className={cn(
-        "px-4 py-2 rounded-md font-rubik hover:opacity-70 transition-opacity",
+        "px-4 py-2 rounded-md font-rubik hover:opacity-95 transition-opacity",
         variants[variant],
         className
       )}

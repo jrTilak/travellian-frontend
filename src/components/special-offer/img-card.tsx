@@ -1,6 +1,6 @@
-import { IoIosStar } from "react-icons/io";
 import SPECIAL_OFFERS from "../../assets/constants/offers";
 import Button from "../shared/buttons/button";
+import Ratings from "../shared/ratings";
 
 type ImgCardProps = (typeof SPECIAL_OFFERS)[number];
 
@@ -36,12 +36,3 @@ const ImgCard = ({ desc, img, location, price, rating }: ImgCardProps) => {
 };
 export default ImgCard;
 
-const Ratings = ({ rating }: { rating: number }) => {
-  return (
-    <div className="flex gap-1">
-      {[...Array(rating)].map((_, index) => (
-        <IoIosStar key={index} className="text-yellow h-6 w-6 " />
-      ))}
-    </div>
-  );
-};
