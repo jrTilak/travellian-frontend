@@ -10,7 +10,9 @@ export default {
         secondary: {
           white: "#FFFFFF",
           black: "#000000",
+          yellow: "#FFF8F1",
         },
+        yellow: "#FFC107",
       },
       screens: {
         xs: "320px",
@@ -19,6 +21,7 @@ export default {
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         rubik: ["Rubik", "sans-serif"],
+        mulish: ["Mulish", "sans-serif"],
       },
     },
   },

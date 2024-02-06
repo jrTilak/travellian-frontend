@@ -8,6 +8,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 const variants = {
   primary: "bg-primary text-secondary-white",
   ghost: "bg-transparent text-secondary-white ",
+  secondary: "bg-secondary-black text-secondary-white",
 } as const;
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,7 +20,11 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       {...props}
-      className={cn("px-4 py-2 rounded-md font-rubik", variants[variant], className)}
+      className={cn(
+        "px-4 py-2 rounded-md font-rubik hover:opacity-70 transition-opacity",
+        variants[variant],
+        className
+      )}
     >
       {children}
     </button>
