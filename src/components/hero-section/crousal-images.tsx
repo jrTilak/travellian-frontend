@@ -22,7 +22,7 @@ const CrousalImages = () => {
   }, [slideIndex]);
 
   return (
-    <div className="h-svh w-svw flex justify-center items-center m-auto flex-col relative">
+    <>
       {/* crousal images  */}
       <div
         ref={crousalImagesRef}
@@ -39,7 +39,7 @@ const CrousalImages = () => {
         <div className="absolute inset-0 bg-black opacity-50 h-screen w-screen" />
       </div>
       {/* crousal buttons */}
-      <div className="absolute right-4 flex-col justify-center items-center z-10 hidden xs:flex">
+      <div className="absolute right-4 flex-col justify-center items-center z-50 hidden xs:flex">
         {HERO_IMAGES.map((_, i) => (
           <button
             key={i}
@@ -79,7 +79,7 @@ const CrousalImages = () => {
           <IoIosArrowDown className="h-4 w-4" />
         </button>
       </div>
-    </div>
+    </>
   );
 };
 export default CrousalImages;

@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Rubik&display=swap");
 /* Hide scrollbar for Chrome, Safari and Opera */
+
+* {
+  font-family: "Rubik", sans-serif;
+}
+
 *::-webkit-scrollbar {
   display: none;
 }
