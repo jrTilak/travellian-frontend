@@ -12,7 +12,7 @@ const Header = () => {
             key={i}
             className={cn(
               "inline-block mx-4 relative",
-              link.path === "/" ? "font-semibold" : "font-normal"
+              link.path === "#main" ? "font-semibold" : "font-normal"
             )}
           >
             <a href={link.path}>{link.label}</a>
@@ -20,7 +20,7 @@ const Header = () => {
               <div
                 className={cn(
                   "h-0.5 w-full absolute -bottom-1 bg-primary",
-                  link.path === "/" ? "opacity-100" : "opacity-0"
+                  link.path === "#main" ? "opacity-100" : "opacity-0"
                 )}
               />
             }

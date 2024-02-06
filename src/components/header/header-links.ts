@@ -1,5 +1,5 @@
 const HEADER_LINKS = [
-  { label: "Home", path: "/" },
+  { label: "Home", path: "#main" },
   { label: "Explore", path: "#explore" },
   { label: "Travel", path: "#travel" },
   { label: "Blog", path: "#blog" },
