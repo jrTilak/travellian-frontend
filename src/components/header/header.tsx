@@ -5,27 +5,29 @@ import Button from "../shared/button";
 import HEADER_LINKS from "./header-links";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-// import useScrollTop from "../../hooks/use-scroll-top";
+import useScrollTop from "../../hooks/use-scroll-top";
 
 const Header = () => {
   const asideRef = useRef<HTMLDivElement>(null);
-  // const isScrolled = useScrollTop(100);
-  const isScrolled = false;
+  const isScrolled = useScrollTop(100);
+  // const isScrolled = false;
   return (
     <nav
       className={cn(
         "flex justify-between items-center w-full z-50 px-6 py-4 sm:px-8 sm:py-5 lg:p-8 xl:px-20 text-secondary-white absolute top-0 left-0 right-0 transition-all",
         isScrolled
-          ? "fixed bg-gray-600 bg-opacity-40 backdrop-blur-sm py-2 sm:py-3 lg:p-5"
+          ? "fixed bg-gray-600 bg-opacity-40 backdrop-blur-sm py-2 sm:py-3 lg:p-4"
           : ""
       )}
     >
-      <img
-        src={logo}
-        loading="lazy"
-        className="h-5 sm:h-8 lg:h-10"
-        alt="Travellian"
-      />
+      <a href="#main">
+        <img
+          src={logo}
+          loading="lazy"
+          className="h-5 sm:h-8"
+          alt="Travellian"
+        />
+      </a>
       <ul className="gap-3 font-rubik hidden lg:flex">
         {HEADER_LINKS.map((link, i) => (
           <li
