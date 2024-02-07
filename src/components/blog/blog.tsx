@@ -15,7 +15,8 @@ const Blogs = () => {
       <div className="flex lg:flex-row flex-col gap-8 my-8 md:my-12 items-center justify-start ">
         <img
           src={BLOG.img}
-          alt=""
+          loading="lazy"
+          alt={BLOG.title}
           className=" w-full h-64 lg:h-[500px] lg:max-w-[672px] rounded-xl object-cover object-center "
         />
         <div className="flex flex-col gap-2 sm:gap-4 lg:max-w-[672px] items-start justify-between">

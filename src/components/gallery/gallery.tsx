@@ -21,8 +21,9 @@ const Gallery = () => {
       >
         {GALLERY_IMAGES.map((img, index) => (
           <img
+          loading="lazy"
             src={img}
-            alt=""
+            alt="gallery image"
             key={index}
             className={cn(
               "w-full h-60   sm:w-[320px] sm:min-w-[320px] sm:h-[469px] object-cover object-center rounded-3xl",

@@ -20,7 +20,7 @@ const Header = () => {
           : ""
       )}
     >
-      <img src={logo} className="h-5 sm:h-8 lg:h-10" alt="Travellian" />
+      <img src={logo} loading="lazy" className="h-5 sm:h-8 lg:h-10" alt="Travellian" />
       <ul className="gap-3 font-rubik hidden lg:flex">
         {HEADER_LINKS.map((link, i) => (
           <li

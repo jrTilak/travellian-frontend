@@ -10,7 +10,7 @@ const Footer = () => {
         <Newsletter />
       </div>
       <div className="flex flex-col gap-1 justify-start">
-        <img src={logo} alt="" className="h-11 w-max" />
+        <img src={logo} alt="travellian" className="h-11 w-max" loading="lazy" />
         <span className="text-sm">
           Copyright © Travellian 2020 All rights reserved
         </span>

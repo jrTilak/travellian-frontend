@@ -6,20 +6,14 @@ type TripBoxProps = (typeof TRIPS)[number] & {
   showDetails: boolean;
 };
 
-const TripBox = ({
-  duration,
-  image,
-  name,
-  price,
-  ratings,
-  type,
-  showDetails,
-}: TripBoxProps) => {
+const TripBox = (props: TripBoxProps) => {
+  const { image, type, price, name, ratings, duration, showDetails } = props;
   return (
     <div className="flex flex-col gap-3 font-rubik ">
       <img
+        loading="lazy"
         src={image}
-        alt=""
+        alt={name}
         className="min-w-full aspect-[4/3] lg:w-[300px] lg:h-[399px] lg:min-w-[300px] lg:aspect-[3/4] object-cover object-center rounded-3xl"
       />
       <div

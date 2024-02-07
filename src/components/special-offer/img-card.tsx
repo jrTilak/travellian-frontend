@@ -9,7 +9,8 @@ const ImgCard = ({ desc, img, location, price, rating }: ImgCardProps) => {
     <div className="min-w-full sm:min-w-96 sm:w-96 h-fit bg-secondary-yellow rounded-2xl">
       <img
         src={img}
-        alt=""
+        loading="lazy"
+        alt={location}
         className="h-52 md:h-60 w-full object-cover object-center rounded-t-2xl"
       />
       <div className="p-6 flex gap-3 md:gap-4 items-start flex-col m-auto h-max">
