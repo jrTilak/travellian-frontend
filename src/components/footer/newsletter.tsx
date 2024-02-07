@@ -31,6 +31,8 @@ const Newsletter = () => {
             className="outline-none bg-secondary-yellow p-4 flex-grow rounded-lg text-primary w-full sm:max-w-96 lg:w-[372px] lg:max-w-[372px]"
           />
           <Button
+            name="subscribe"
+            aria-label="subscribe"
             type="submit"
             variant="primary"
             className="px-8 py-3 w-full md:w-auto sm:max-w-32"

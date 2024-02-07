@@ -28,6 +28,8 @@ const Blogs = () => {
             {BLOG.desc}
           </p>
           <Button
+            name="read-more"
+            aria-label="read-more"
             variant="ghost"
             className="text-primary text-lg sm:text-xl flex gap-3 items-center justify-center"
           >

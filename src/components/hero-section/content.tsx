@@ -75,6 +75,8 @@ const Content = () => {
           />
         </div>
         <Button
+          name="book-now"
+          aria-label="book-now"
           type="submit"
           variant="primary"
           className="flex font-normal gap-2 h-full w-full sm:w-40 items-center justify-center rounded-none rounded-b-2xl sm:rounded-bl-none sm:rounded-r-2xl font-playfair py-8 md:px-6"

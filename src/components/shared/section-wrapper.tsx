@@ -81,6 +81,7 @@ const Buttons = ({
   return (
     <>
       <Button
+        name="left-slide"
         onClick={() => handleSlide("left")}
         variant="secondary"
         className="p-3 px-4"
@@ -88,6 +89,7 @@ const Buttons = ({
         <IoIosArrowBack className="text-xl lg:text-2xl" />
       </Button>
       <Button
+        name="right-slide"
         onClick={() => handleSlide("right")}
         variant="primary"
         className="p-3 px-4"

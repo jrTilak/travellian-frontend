@@ -55,6 +55,8 @@ const CrousalImages = () => {
       <div className="absolute right-4 flex-col justify-center items-center z-30 hidden sm:flex gap-3">
         {HERO_IMAGES.map((_, i) => (
           <button
+            name="crousal-button"
+            aria-label="crousal-button"
             key={i}
             onClick={() => {
               setSlideIndex(i);
@@ -68,6 +70,8 @@ const CrousalImages = () => {
           </button>
         ))}
         <button
+          name="crousal-button"
+          aria-label="crousal-button"
           disabled={slideIndex === 0}
           onClick={() => setSlideIndex((prev) => prev - 1)}
           className={cn(
@@ -80,6 +84,8 @@ const CrousalImages = () => {
           <IoIosArrowUp className="h-4 w-4" />
         </button>
         <button
+          name="crousal-button"
+          aria-label="crousal-button"
           disabled={slideIndex === HERO_IMAGES.length - 1}
           onClick={() => setSlideIndex((prev) => prev + 1)}
           className={cn(

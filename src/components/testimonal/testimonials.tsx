@@ -43,6 +43,8 @@ const Testimonials = () => {
       </div>
       <div className="flex gap-8 mt-16 justify-end">
         <Button
+          name="left-arrow"
+          aria-label="left-arrow"
           onClick={() => handleSlide("left")}
           variant="secondary"
           className="p-3 px-4"
@@ -50,6 +52,8 @@ const Testimonials = () => {
           <IoIosArrowBack className="text-xl lg:text-2xl" />
         </Button>
         <Button
+          name="right-arrow"
+          aria-label="right-arrow"
           onClick={() => handleSlide("right")}
           variant="primary"
           className="p-3 px-4"

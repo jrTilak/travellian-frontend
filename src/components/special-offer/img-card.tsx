@@ -27,6 +27,8 @@ const ImgCard = ({ desc, img, location, price, rating }: ImgCardProps) => {
             <span className="text-2xl md:text-3xl text-primary">€{price}</span>
           </p>
           <Button
+            name="details"
+            aria-label="details"
             variant="primary"
             className="text-sm md:text-base px-6 py-3 rounded-lg md:rounded-xl"
           >

@@ -20,7 +20,12 @@ const Header = () => {
           : ""
       )}
     >
-      <img src={logo} loading="lazy" className="h-5 sm:h-8 lg:h-10" alt="Travellian" />
+      <img
+        src={logo}
+        loading="lazy"
+        className="h-5 sm:h-8 lg:h-10"
+        alt="Travellian"
+      />
       <ul className="gap-3 font-rubik hidden lg:flex">
         {HEADER_LINKS.map((link, i) => (
           <li
@@ -45,10 +50,10 @@ const Header = () => {
         ))}
       </ul>
       <div className="items-center hidden lg:flex">
-        <Button variant="ghost">
+        <Button name="login" aria-label="login" variant="ghost">
           <a href="#login">Login</a>
         </Button>
-        <Button variant="primary">
+        <Button name="signup" aria-label="signup" variant="primary">
           <a href="#signup">Sign Up</a>
         </Button>
       </div>
@@ -61,6 +66,8 @@ const Header = () => {
         "
       >
         <button
+          name="menu"
+          aria-label="menu"
           className="absolute top-4 left-4"
           onClick={() => {
             if (asideRef.current) {
@@ -94,10 +101,20 @@ const Header = () => {
           ))}
         </ul>
         <div className="items-center flex flex-col justify-center w-full gap-1">
-          <Button variant="ghost" className="text-secondary-black w-full">
+          <Button
+            name="login"
+            aria-label="login"
+            variant="ghost"
+            className="text-secondary-black w-full"
+          >
             <a href="#login">Login</a>
           </Button>
-          <Button variant="primary" className="w-full">
+          <Button
+            name="signup"
+            aria-label="signup"
+            variant="primary"
+            className="w-full"
+          >
             <a href="#signup">Sign Up</a>
           </Button>
         </div>
@@ -111,6 +128,8 @@ const Header = () => {
         }}
         variant="ghost"
         className="lg:hidden"
+        name="menu"
+        aria-label="menu"
       >
         <IoIosMenu className="h-7 w-7 sm:h-9 sm:w-9" />
       </Button>
