@@ -18,7 +18,9 @@ const App = () => {
       <TripPlanners />
       <Gallery />
       <Testimonials />
-      <Newsletter />
+      <div className="xl:hidden">
+        <Newsletter />
+      </div>
       <Footer />
     </main>
   );

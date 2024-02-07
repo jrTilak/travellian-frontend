@@ -16,7 +16,7 @@ const TripBox = ({
   showDetails,
 }: TripBoxProps) => {
   return (
-    <div className="flex flex-col gap-3 font-rubik">
+    <div className="flex flex-col gap-3 font-rubik ">
       <img
         src={image}
         alt=""
@@ -28,12 +28,14 @@ const TripBox = ({
           showDetails ? "flex" : "lg:hidden flex"
         )}
       >
-        <h3 className="flex justify-between text-lg">
+        <h3 className="flex justify-between text-sm sm:text-2xl lg:text-base font-medium">
           <span className="uppercase">{type}</span>
-          <span>€{price}</span>
+          <span>{price}</span>
         </h3>
-        <h2 className="text-3xl font-semibold font-playfair">{name}</h2>
-        <div className="flex justify-between">
+        <h2 className="text-2xl sm:text-4xl lg:text-[28px] font-semibold font-playfair">
+          {name}
+        </h2>
+        <div className="flex justify-between text-sm sm:text-2xl lg:text-base font-medium">
           <Ratings rating={ratings} />
           <span>{duration} tour</span>
         </div>

@@ -3,11 +3,14 @@ import { HERO_IMAGES } from "../../assets/constants/images";
 import { GoDotFill } from "react-icons/go";
 import { cn } from "../../utils/cn";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+//import nodejs
 
 const CrousalImages = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const crousalImagesRef = useRef<HTMLDivElement>(null);
+  const interval = useRef<NodeJS.Timeout>();
 
+  // slide images
   useEffect(() => {
     const slideImages = () => {
       const landingBackgroundImages =
@@ -17,6 +20,14 @@ const CrousalImages = () => {
       landingBackgroundImages.forEach((image) => {
         image.style.transform = `translateX(-${slideIndex * 100}%)`;
       });
+
+      // clear the interval and set it again
+      clearInterval(interval.current as NodeJS.Timeout);
+      interval.current = setInterval(() => {
+        setSlideIndex((prev) =>
+          prev === HERO_IMAGES.length - 1 ? 0 : prev + 1
+        );
+      }, 5000);
     };
     slideImages();
   }, [slideIndex]);
@@ -38,6 +49,7 @@ const CrousalImages = () => {
         ))}
         <div className="absolute inset-0 bg-black opacity-50 h-full w-screen" />
       </div>
+      
       {/* crousal buttons */}
       <div className="absolute right-4 flex-col justify-center items-center z-30 hidden sm:flex gap-3">
         {HERO_IMAGES.map((_, i) => (

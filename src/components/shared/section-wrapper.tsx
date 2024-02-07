@@ -1,5 +1,5 @@
 import { cn } from "../../utils/cn";
-import Button from "../shared/buttons/button";
+import Button from "./button";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 type SectionWrapperProps = {
@@ -10,6 +10,7 @@ type SectionWrapperProps = {
   desc: string;
   id: string;
   dir: "row" | "reverse";
+  underlineClassName?: string;
 };
 
 const SectionWrapper = (props: SectionWrapperProps) => {
@@ -21,6 +22,7 @@ const SectionWrapper = (props: SectionWrapperProps) => {
     dir = "row",
     children,
     showBtn = true,
+    underlineClassName,
   } = props;
   const handleSlide = (direction: "left" | "right") => {
     if (childRef?.current) {
@@ -35,19 +37,24 @@ const SectionWrapper = (props: SectionWrapperProps) => {
   };
 
   return (
-    <section id={id} className="px-8 my-24">
+    <section id={id} className="py-10 sm:py-16 px-4 sm:px-5 xl:px-8">
       <div
         className={cn(
           "flex items-end w-full justify-between",
           dir === "row" ? "flex-row" : "flex-row-reverse"
         )}
       >
-        <div className="flex flex-col gap-6">
-          <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl">
+        <div
+          className={cn(
+            "flex flex-col gap-3 sm:gap-6",
+            dir === "row" ? "items-start" : "items-end"
+          )}
+        >
+          <h2 className="font-playfair text-[40px] leading-[53.2px] sm:text-[54px]  md:text-6xl lg:text-7xl">
             {title}
           </h2>
-          <span className="w-80 h-0.5 bg-primary" />
-          <p className="text-2xl text-muted">{desc}</p>
+          <span className={cn("h-0.5 bg-primary", underlineClassName)} />
+          <p className="text-sm sm:text-lg lg:text-2xl text-muted">{desc}</p>
         </div>
         {showBtn && (
           <div className="gap-8 hidden lg:flex">
@@ -57,7 +64,7 @@ const SectionWrapper = (props: SectionWrapperProps) => {
       </div>
       {children}
       {showBtn && (
-        <div className="flex gap-8 lg:hidden mt-28 items-center justify-center">
+        <div className="flex gap-8 lg:hidden items-center justify-center">
           <Buttons handleSlide={handleSlide} />
         </div>
       )}
@@ -76,16 +83,16 @@ const Buttons = ({
       <Button
         onClick={() => handleSlide("left")}
         variant="secondary"
-        className="p-4 px-5"
+        className="p-3 px-4"
       >
-        <IoIosArrowBack className="text-3xl" />
+        <IoIosArrowBack className="text-xl lg:text-2xl" />
       </Button>
       <Button
         onClick={() => handleSlide("right")}
         variant="primary"
-        className="p-4 px-5"
+        className="p-3 px-4"
       >
-        <IoIosArrowForward className="text-3xl" />
+        <IoIosArrowForward className="text-xl lg:text-2xl" />
       </Button>
     </>
   );

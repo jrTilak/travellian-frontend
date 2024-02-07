@@ -7,6 +7,7 @@ const Destinations = () => {
   const destinationsImgContainerRef = useRef<HTMLDivElement>(null);
   return (
     <SectionWrapper
+      underlineClassName="w-full xs:w-[227px] md:w-[365px]"
       dir="row"
       childRef={destinationsImgContainerRef}
       title="Popular Destinations"
@@ -15,7 +16,7 @@ const Destinations = () => {
     >
       <div
         ref={destinationsImgContainerRef}
-        className="flex gap-8 overflow-x-hidden mt-28"
+        className="flex gap-8 overflow-x-scroll my-8 md:my-12"
       >
         {DESTINATIONS.map((destination, index) => (
           <ImgCard key={index} {...destination} />

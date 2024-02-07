@@ -13,10 +13,11 @@ const Gallery = () => {
       childRef={galleryImgContainerRef}
       dir="row"
       showBtn={true}
+      underlineClassName="w-[283px]"
     >
       <div
         ref={galleryImgContainerRef}
-        className="flex flex-col lg:flex-row gap-8 overflow-x-hidden mt-28 scroll-smooth snap-mandatory snap-x"
+        className="flex flex-col sm:flex-row gap-5 overflow-x-scroll my-8 md:my-12"
       >
         {GALLERY_IMAGES.map((img, index) => (
           <img
@@ -24,8 +25,9 @@ const Gallery = () => {
             alt=""
             key={index}
             className={cn(
-              "w-full h-[351px] lg:w-[320px] lg:min-w-[320px] lg:h-[469px] object-cover object-center rounded-3xl",
-              index === 1 ? "" : "mt-16"
+              "w-full h-60   sm:w-[320px] sm:min-w-[320px] sm:h-[469px] object-cover object-center rounded-3xl",
+              index === 1 ? "" : "sm:mt-16",
+              index > 3 ? "hidden sm:block" : ""
             )}
           />
         ))}

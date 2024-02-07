@@ -4,17 +4,19 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 const Person: React.FC<InputProps> = (props) => {
   return (
-    <div className="flex flex-col gap-3 relative w-full">
+    <div className="flex flex-col w-full">
       <label htmlFor={props.name} className="uppercase">
         {props.name}
       </label>
       <input
+        max={100}
+        min={1}
         type="number"
         id={props.name}
-        className="outline-none w-full font-playfair text-secondary-black"
+        className="outline-none w-full font-playfair text-secondary-black mt-3" 
         {...props}
       />
-      <span className="absolute bottom-0 right-0 w-full h-0.5 bg-secondary-black" />
+      <span className="w-full h-px bg-secondary-black" />
     </div>
   );
 };

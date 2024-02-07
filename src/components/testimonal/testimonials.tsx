@@ -1,4 +1,4 @@
-import Button from "../shared/buttons/button";
+import Button from "../shared/button";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useRef } from "react";
 import TESTIMONIALS from "../../assets/constants/testimonials";
@@ -22,18 +22,20 @@ const Testimonials = () => {
   return (
     <section id="explore" className="p-8">
       <div className="flex flex-col gap-5">
-        <h2 className="font-playfair text-[64px]">Traveler’s Experiences</h2>
+        <h2 className="font-playfair text-[40px] leading-[53.2px] sm:text-[54px]  md:text-6xl lg:text-7xl">
+          Traveler's Experiences
+        </h2>
         <span className="w-80 h-0.5 bg-primary" />
       </div>
       <div className="flex items-center justify-between">
-        <p className="text-2xl">
+        <p className="text-sm sm:text-lg lg:text-2xl text-muted mt-4">
           Most popular destinations around the world, from historical places to
           natural wonders.
         </p>
       </div>
       <div
         ref={destinationsImgContainerRef}
-        className="flex gap-8 overflow-x-hidden mt-28 scroll-smooth snap-mandatory snap-x"
+        className="flex gap-5 overflow-x-scroll my-8 md:my-12"
       >
         {TESTIMONIALS.map((review, index) => (
           <Testimonial key={index} {...review} />
@@ -43,16 +45,16 @@ const Testimonials = () => {
         <Button
           onClick={() => handleSlide("left")}
           variant="secondary"
-          className="p-4 px-5"
+          className="p-3 px-4"
         >
-          <IoIosArrowBack className="text-2xl" />
+          <IoIosArrowBack className="text-xl lg:text-2xl" />
         </Button>
         <Button
           onClick={() => handleSlide("right")}
           variant="primary"
-          className="p-4 px-5"
+          className="p-3 px-4"
         >
-          <IoIosArrowForward className="text-2xl" />
+          <IoIosArrowForward className="text-xl lg:text-2xl" />
         </Button>
       </div>
     </section>

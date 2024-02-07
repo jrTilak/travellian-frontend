@@ -1,15 +1,26 @@
 import { useRef } from "react";
 import logo from "../../assets/img/logo.svg";
 import { cn } from "../../utils/cn";
-import Button from "../shared/buttons/button";
+import Button from "../shared/button";
 import HEADER_LINKS from "./header-links";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+// import useScrollTop from "../../hooks/use-scroll-top";
+
 const Header = () => {
   const asideRef = useRef<HTMLDivElement>(null);
+  // const isScrolled = useScrollTop(100);
+  const isScrolled = false;
   return (
-    <nav className="flex justify-between items-center w-full z-50 px-6 py-4 sm:px-8 sm:py-5 lg:p-8 text-secondary-white absolute top-0 left-0 right-0">
-      <img src={logo} className="h-4 sm:h-8 lg:h-11" alt="Travellian" />
+    <nav
+      className={cn(
+        "flex justify-between items-center w-full z-50 px-6 py-4 sm:px-8 sm:py-5 lg:p-8 xl:px-20 text-secondary-white absolute top-0 left-0 right-0 transition-all",
+        isScrolled
+          ? "fixed bg-gray-600 bg-opacity-40 backdrop-blur-sm py-2 sm:py-3 lg:p-5"
+          : ""
+      )}
+    >
+      <img src={logo} className="h-5 sm:h-8 lg:h-10" alt="Travellian" />
       <ul className="gap-3 font-rubik hidden lg:flex">
         {HEADER_LINKS.map((link, i) => (
           <li
@@ -42,6 +53,7 @@ const Header = () => {
         </Button>
       </div>
 
+      {/* aside navbar for small devices */}
       <aside
         ref={asideRef}
         className="flex flex-col items-center justify-between pt-28 p-6 fixed top-0 right-0 w-56 h-full bg-secondary-white text-secondary-black lg:hidden

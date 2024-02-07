@@ -1,5 +1,5 @@
 import BLOG from "../../assets/constants/blog";
-import Button from "../shared/buttons/button";
+import Button from "../shared/button";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import SectionWrapper from "../shared/section-wrapper";
 const Blogs = () => {
@@ -10,25 +10,28 @@ const Blogs = () => {
       showBtn={false}
       title="Our Blog"
       id="blog"
+      underlineClassName="w-[150px]"
     >
-      <div className="flex lg:flex-row flex-col gap-8 mt-28 items-center justify-start ">
+      <div className="flex lg:flex-row flex-col gap-8 my-8 md:my-12 items-center justify-start ">
         <img
           src={BLOG.img}
           alt=""
-          className=" w-full lg:h-[802px] lg:w-[672px] md:aspect-[0.84/1] rounded-xl"
+          className=" w-full h-64 lg:h-[500px] lg:max-w-[672px] rounded-xl object-cover object-center "
         />
-        <div className="flex flex-col gap-4 max-w-[672px] items-start justify-between">
+        <div className="flex flex-col gap-2 sm:gap-4 lg:max-w-[672px] items-start justify-between">
           <h2
             dangerouslySetInnerHTML={{ __html: BLOG.title }}
-            className="text-5xl md:text-6xl font-playfair"
+            className="text-4xl leading-[53.2px] md:text-6xl font-playfair"
           />
-          <p className="text-[24px] leading-[52px]">{BLOG.desc}</p>
+          <p className="text-base sm:text-lg leading-[30px] sm:leading-[40px]">
+            {BLOG.desc}
+          </p>
           <Button
             variant="ghost"
-            className="text-primary text-2xl flex gap-3 items-center justify-center"
+            className="text-primary text-lg sm:text-xl flex gap-3 items-center justify-center"
           >
             <span>Read More</span>
-            <IoIosArrowRoundForward className="w-12 h-full" />
+            <IoIosArrowRoundForward className="text-2xl sm:text-4xl" />
           </Button>
         </div>
       </div>

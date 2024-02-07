@@ -16,7 +16,7 @@ const TRIPS = [
     name: "Paris City Tour",
     type: "Guided Tour",
     image: trip2,
-    price: "95/Day",
+    price: "€95/Day",
     ratings: 5,
     duration: "7 Days",
   },

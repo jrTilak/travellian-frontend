@@ -12,10 +12,11 @@ const SpecialOffers = () => {
       desc="Check out our special offer and discounts"
       title="Special Offer"
       dir="reverse"
+      underlineClassName="w-[241px]"
     >
       <div
         ref={ref}
-        className="flex gap-8 overflow-x-hidden mt-28 scroll-smooth snap-mandatory snap-x"
+        className="flex gap-8 overflow-x-scroll my-8 md:my-12"
       >
         {SPECIAL_OFFERS.map((offer, index) => (
           <ImgCard key={index} {...offer} />
