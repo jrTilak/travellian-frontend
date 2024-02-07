@@ -8,7 +8,6 @@ const FOOTER_LINKS: FooterLink = [
     links: [
       { label: "Home", url: "#" },
       { label: "Explore", url: "#" },
-      { label: "Explore", url: "#" },
       { label: "Travel", url: "#" },
       { label: "Blog", url: "#" },
       { label: "Pricing", url: "#" },

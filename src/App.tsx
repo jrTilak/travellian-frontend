@@ -19,7 +19,7 @@ const App = () => {
       <Gallery />
       <Testimonials />
       <div className="xl:hidden">
-        <Newsletter />
+      <Newsletter />
       </div>
       <Footer />
     </main>

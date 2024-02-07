@@ -1,12 +1,13 @@
 import FOOTER_LINKS from "../../assets/constants/footer-links";
 import logo from "../../assets/img/logo.svg";
 import { cn } from "../../utils/cn";
+import Newsletter from "./newsletter";
 
 const Footer = () => {
   return (
-    <footer className="bg-grey py-20 px-4 flex lg:relative flex-col lg:flex-row gap-12 justify-evenly text-secondary-white">
-      <div className="hidden xl:block absolute inset-x-1/2 -translate-x-1/2">
-        <Footer />
+    <footer className="bg-grey py-20 px-4 flex lg:relative lg:px-8 lg:py-56 lg:pb-36 flex-col lg:flex-row gap-12 justify-evenly text-secondary-white">
+      <div className="hidden xl:block absolute left-1/2 -translate-x-1/2 -top-24">
+        <Newsletter />
       </div>
       <div className="flex flex-col gap-1 justify-start">
         <img src={logo} alt="" className="h-11 w-max" />
@@ -25,7 +26,7 @@ const Footer = () => {
           >
             {links.map((link) => (
               <li key={link.label}>
-                <a className="text-base" href={link.url}>
+                <a className="text-base hover:text-muted transition-colors" href={link.url}>
                   {link.Icon ? (
                     <link.Icon className="w-7 h-7" />
                   ) : (

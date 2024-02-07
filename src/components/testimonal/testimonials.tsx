@@ -20,7 +20,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="explore" className="p-8">
+    <section id="explore" className="p-8 lg:mb-28">
       <div className="flex flex-col gap-5">
         <h2 className="font-playfair text-[40px] leading-[53.2px] sm:text-[54px]  md:text-6xl lg:text-7xl">
           Traveler's Experiences
