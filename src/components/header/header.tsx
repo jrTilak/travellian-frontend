@@ -5,11 +5,11 @@ import Button from "../shared/button";
 import HEADER_LINKS from "./header-links";
 import { IoIosMenu } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import useScrollTop from "../../hooks/use-scroll-top";
+import useScrollDirection from "../../hooks/use-scroll-direction";
 
 const Header = () => {
   const asideRef = useRef<HTMLDivElement>(null);
-  const isScrolled = useScrollTop(100);
+  const isScrolled = useScrollDirection();
 
   const toggleAside = (toRemove: boolean) => {
     if (asideRef.current) {
