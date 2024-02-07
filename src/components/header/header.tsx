@@ -10,7 +10,17 @@ import useScrollTop from "../../hooks/use-scroll-top";
 const Header = () => {
   const asideRef = useRef<HTMLDivElement>(null);
   const isScrolled = useScrollTop(100);
-  // const isScrolled = false;
+
+  const toggleAside = (toRemove: boolean) => {
+    if (asideRef.current) {
+      if (toRemove) {
+        asideRef.current.classList.add("translate-x-full");
+      } else {
+        asideRef.current.classList.remove("translate-x-full");
+      }
+    }
+  };
+
   return (
     <nav
       className={cn(
@@ -63,19 +73,15 @@ const Header = () => {
       {/* aside navbar for small devices */}
       <aside
         ref={asideRef}
-        className="flex flex-col items-center justify-between pt-28 p-6 fixed top-0 right-0 w-56 h-full bg-secondary-white text-secondary-black lg:hidden
-        transition-all translate-x-full
-        "
+        onBlur={() => toggleAside(true)}
+        className="flex flex-col items-center justify-between pt-28 p-6 fixed top-0 right-0 w-56 h-dvh bg-secondary-white text-secondary-black lg:hidden
+        transition-all translate-x-full"
       >
         <button
           name="menu"
           aria-label="menu"
           className="absolute top-4 left-4"
-          onClick={() => {
-            if (asideRef.current) {
-              asideRef.current.classList.toggle("translate-x-full");
-            }
-          }}
+          onClick={() => toggleAside(true)}
         >
           <RxCross2 className="h-7 w-7 sm:h-9 sm:w-9" />
         </button>
@@ -123,11 +129,7 @@ const Header = () => {
       </aside>
 
       <Button
-        onClick={() => {
-          if (asideRef.current) {
-            asideRef.current.classList.toggle("translate-x-full");
-          }
-        }}
+        onClick={() => toggleAside(false)}
         variant="ghost"
         className="lg:hidden"
         name="menu"

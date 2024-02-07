@@ -4,7 +4,7 @@ import CrousalImages from "./crousal-images";
 
 const HeroSection = () => {
   return (
-    <div className="w-full sm:h-svh flex justify-center items-center m-auto flex-col relative">
+    <div className="w-full sm:h-dvh flex justify-center items-center m-auto flex-col relative">
       <Header />
       <CrousalImages />
       <Content />
