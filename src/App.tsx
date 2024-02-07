@@ -10,7 +10,7 @@ import TripPlanners from "./components/trip-planners/trip-planners";
 
 const App = () => {
   return (
-    <main className="w-svw h-max" id="home">
+    <main className="w-svw h-max" id="main">
       <HeroSection />
       <Destinations />
       <SpecialOffers />
