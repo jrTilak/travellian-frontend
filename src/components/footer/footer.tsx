@@ -4,7 +4,7 @@ import { cn } from "../../utils/cn";
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-12 py-44 flex justify-evenly text-secondary-white">
+    <footer className="bg-black px-12 py-44 flex flex-col lg:flex-row justify-evenly text-secondary-white">
       <div className="flex flex-col gap-1 justify-start">
         <img src={logo} alt="" className="h-11 w-max" />
         <span className="text-xs">

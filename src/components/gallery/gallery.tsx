@@ -1,51 +1,22 @@
-import Button from "../shared/buttons/button";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useRef } from "react";
 import GALLERY_IMAGES from "../../assets/constants/gallery";
 import { cn } from "../../utils/cn";
-const Destinations = () => {
+import SectionWrapper from "../shared/section-wrapper";
+
+const Gallery = () => {
   const galleryImgContainerRef = useRef<HTMLDivElement>(null);
-
-  const handleSlide = (direction: "left" | "right") => {
-    if (galleryImgContainerRef.current) {
-      const container = galleryImgContainerRef.current;
-      const scrollAmount = document.documentElement.clientWidth / 2;
-      if (direction === "left") {
-        container.scrollLeft -= scrollAmount;
-      } else {
-        container.scrollLeft += scrollAmount;
-      }
-    }
-  };
-
   return (
-    <section id="explore" className="p-8">
-      <div className="flex flex-col gap-5">
-        <h2 className="font-playfair text-[64px]">Destination Gallery</h2>
-        <span className="w-80 h-0.5 bg-primary" />
-      </div>
-      <div className="flex items-center justify-between">
-        <p className="text-2xl">Our photo gallery on trip</p>
-        <div className="flex gap-8">
-          <Button
-            onClick={() => handleSlide("left")}
-            variant="secondary"
-            className="p-4 px-5"
-          >
-            <IoIosArrowBack className="text-2xl" />
-          </Button>
-          <Button
-            onClick={() => handleSlide("right")}
-            variant="primary"
-            className="p-4 px-5"
-          >
-            <IoIosArrowForward className="text-2xl" />
-          </Button>
-        </div>
-      </div>
+    <SectionWrapper
+      id="gallery"
+      desc="Our photo gallery on trip"
+      title="Destination Gallery"
+      childRef={galleryImgContainerRef}
+      dir="row"
+      showBtn={true}
+    >
       <div
         ref={galleryImgContainerRef}
-        className="flex gap-8 overflow-x-hidden mt-28 scroll-smooth snap-mandatory snap-x"
+        className="flex flex-col lg:flex-row gap-8 overflow-x-hidden mt-28 scroll-smooth snap-mandatory snap-x"
       >
         {GALLERY_IMAGES.map((img, index) => (
           <img
@@ -53,13 +24,13 @@ const Destinations = () => {
             alt=""
             key={index}
             className={cn(
-              "w-[320px] min-w-[320px] h-[469px] object-cover object-center rounded-3xl",
+              "w-full h-[351px] lg:w-[320px] lg:min-w-[320px] lg:h-[469px] object-cover object-center rounded-3xl",
               index === 1 ? "" : "mt-16"
             )}
           />
         ))}
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
-export default Destinations;
+export default Gallery;

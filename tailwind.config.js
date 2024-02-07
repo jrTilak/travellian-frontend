@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         primary: "#FF7757",
+        muted: "#767E86",
         secondary: {
           white: "#FFFFFF",
           black: "#000000",

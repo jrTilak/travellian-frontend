@@ -4,7 +4,7 @@ import TripBox from "./trip-box";
 
 const TripPlanners = () => {
   return (
-    <section className="flex gap-12 mt-28 p-8 items-center">
+    <section className="flex flex-col lg:flex-row gap-12 mt-28 p-8 lg:items-center">
       <div className="flex flex-col gap-6 min-w-[394px] w-[394px]">
         <div className="flex flex-col gap-5">
           <h2 className="font-playfair text-[64px]">Trip Planners</h2>
@@ -17,7 +17,7 @@ const TripPlanners = () => {
         </p>
         <SuperBtn>View all trip plans</SuperBtn>
       </div>
-      <div className="flex gap-6 overflow-hidden h-full items-end">
+      <div className="flex flex-col lg:flex-row gap-6 overflow-hidden h-full items-end">
         {TRIPS.map((trip, index) => (
           <TripBox {...trip} key={index} showDetails={index % 2 !== 0} />
         ))}

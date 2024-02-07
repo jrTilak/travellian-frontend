@@ -36,10 +36,10 @@ const CrousalImages = () => {
             className="w-full h-full object-cover object-center absolute z-0 "
           />
         ))}
-        <div className="absolute inset-0 bg-black opacity-50 h-screen w-screen" />
+        <div className="absolute inset-0 bg-black opacity-50 h-full w-screen" />
       </div>
       {/* crousal buttons */}
-      <div className="absolute right-4 flex-col justify-center items-center z-50 hidden xs:flex">
+      <div className="absolute right-4 flex-col justify-center items-center z-50 hidden sm:flex gap-3">
         {HERO_IMAGES.map((_, i) => (
           <button
             key={i}

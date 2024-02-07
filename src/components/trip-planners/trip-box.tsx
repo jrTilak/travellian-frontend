@@ -20,12 +20,12 @@ const TripBox = ({
       <img
         src={image}
         alt=""
-        className="w-[300px] h-[399px] min-w-[300px] aspect-[3/4] object-cover object-center rounded-3xl"
+        className="min-w-full aspect-[4/3] lg:w-[300px] lg:h-[399px] lg:min-w-[300px] lg:aspect-[3/4] object-cover object-center rounded-3xl"
       />
       <div
         className={cn(
           "flex flex-col gap-2 px-3",
-          showDetails ? "flex" : "hidden"
+          showDetails ? "flex" : "lg:hidden flex"
         )}
       >
         <h3 className="flex justify-between text-lg">
