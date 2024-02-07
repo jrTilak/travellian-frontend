@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="https://travellian.thapatilak.com.np/">
-    <img src="/public/favicon.svg" alt="Logo" width="80" height="80">
+    <img src="/src/assets/img/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Travellian - The best travel for your jouney begins now</h3>
