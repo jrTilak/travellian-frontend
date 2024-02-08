@@ -35,7 +35,7 @@ const Testimonials = () => {
       </div>
       <div
         ref={destinationsImgContainerRef}
-        className="flex gap-5 overflow-x-scroll my-8 md:my-12"
+        className="flex gap-5 overflow-x-scroll my-8 md:my-12 snap-mandatory snap-x"
       >
         {TESTIMONIALS.map((review, index) => (
           <Testimonial key={index} {...review} />

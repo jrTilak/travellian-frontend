@@ -8,7 +8,7 @@ const ImgCard = ({ title, img, location }: ImgCardProps) => {
       style={{
         backgroundImage: `url(${img})`,
       }}
-      className="min-w-full h-80 sm:h-[456px] md:aspect-[3/4] md:min-w-fit md:max-w-[497px] bg-cover bg-center rounded-xl flex flex-col p-6 text-secondary-white justify-end"
+      className="min-w-full h-80 sm:h-[456px] md:aspect-[3/4] md:min-w-fit md:max-w-[497px] bg-cover bg-center rounded-xl flex flex-col p-6 text-secondary-white justify-end snap-start"
     >
       <h2 className="text-xl md:text-3xl font-playfair">{title}</h2>
       <span className="flex gap-3 items-center">

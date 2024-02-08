@@ -17,16 +17,16 @@ const Gallery = () => {
     >
       <div
         ref={galleryImgContainerRef}
-        className="flex flex-col sm:flex-row gap-5 overflow-x-scroll my-8 md:my-12"
+        className="flex flex-col sm:flex-row gap-5 overflow-x-scroll my-8 md:my-12 snap-mandatory snap-x"
       >
         {GALLERY_IMAGES.map((img, index) => (
           <img
-          loading="lazy"
+            loading="lazy"
             src={img}
             alt="gallery image"
             key={index}
             className={cn(
-              "w-full h-60   sm:w-[320px] sm:min-w-[320px] sm:h-[469px] object-cover object-center rounded-3xl",
+              "w-full h-60 snap-start sm:w-[320px] sm:min-w-[320px] sm:h-[469px] object-cover object-center rounded-3xl",
               index === 1 ? "" : "sm:mt-16",
               index > 3 ? "hidden sm:block" : ""
             )}

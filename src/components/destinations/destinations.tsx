@@ -16,7 +16,7 @@ const Destinations = () => {
     >
       <div
         ref={destinationsImgContainerRef}
-        className="flex gap-8 overflow-x-scroll my-8 md:my-12"
+        className="flex gap-8 overflow-x-scroll my-8 md:my-12 snap-mandatory snap-x"
       >
         {DESTINATIONS.map((destination, index) => (
           <ImgCard key={index} {...destination} />

@@ -16,7 +16,7 @@ const SpecialOffers = () => {
     >
       <div
         ref={ref}
-        className="flex gap-8 overflow-x-scroll my-8 md:my-12"
+        className="flex gap-8 overflow-x-scroll my-8 md:my-12 snap-mandatory snap-x"
       >
         {SPECIAL_OFFERS.map((offer, index) => (
           <ImgCard key={index} {...offer} />

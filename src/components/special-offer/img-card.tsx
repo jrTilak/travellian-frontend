@@ -6,7 +6,7 @@ type ImgCardProps = (typeof SPECIAL_OFFERS)[number];
 
 const ImgCard = ({ desc, img, location, price, rating }: ImgCardProps) => {
   return (
-    <div className="min-w-full sm:min-w-96 sm:w-96 h-fit bg-secondary-yellow rounded-2xl">
+    <div className="min-w-full sm:min-w-96 sm:w-96 h-fit bg-secondary-yellow rounded-2xl snap-start">
       <img
         src={img}
         loading="lazy"

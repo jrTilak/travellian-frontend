@@ -19,7 +19,7 @@ const TripPlanners = () => {
         </p>
         <SuperBtn>View all trip plans</SuperBtn>
       </div>
-      <div className="flex mt-16 lg:mt-0 lg:ml-24 flex-col lg:flex-row gap-12 md:gap-6 overflow-scroll h-full items-end">
+      <div className="flex mt-16 lg:mt-0 lg:ml-24 flex-col lg:flex-row gap-12 md:gap-6 overflow-scroll h-full items-end snap-mandatory snap-x">
         {TRIPS.map((trip, index) => (
           <TripBox {...trip} key={index} showDetails={index % 2 !== 0} />
         ))}
